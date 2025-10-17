@@ -104,7 +104,7 @@ OWNERID = int(os.environ.get('OWNERID', '7273878841'))  # Replace with the actua
 # ============================
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.reamcinezo')_USER', '').split()]
+PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
 
 # ==========reamcinezo')======
 # Miscellaneous Configuration
