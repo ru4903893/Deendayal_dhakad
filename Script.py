@@ -271,9 +271,9 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b>🎬 <a href="https://t.me/rdx_movie1">{file_name}</a></b>
+    CAPTION = """<b>🎬 <a href="https://t.me/+AYRJbl7wJNU1OWU0">{file_name}</a></b>
 
-<b>⚜️ 𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝙱𝚢 :</b> <a href="https://t.me/rdx_movie1">RDX MOVIE</a>"""
+<b>⚜️ 𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝙱𝚢 :</b> <a href="https://t.me/+AYRJbl7wJNU1OWU0">RDX MOVIE</a>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>🏷 Title</b>: <a href={url}>{title}</a>
