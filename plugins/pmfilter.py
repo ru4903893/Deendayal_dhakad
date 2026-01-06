@@ -297,7 +297,6 @@ async def next_page(bot, query):
     else:
         try:
             await query.message.edit_reply_markup(None)
-            )
         except MessageNotModified:
             pass
     await query.answer()
