@@ -32,6 +32,8 @@ from database.gfilters_mdb import (
     get_gfilters,
     del_allg
 )
+
+from database.verify_db import vr_db
 import logging
 from urllib.parse import quote_plus
 from Deendayal_botz.util.file_properties import get_name, get_hash, get_media_file_size
