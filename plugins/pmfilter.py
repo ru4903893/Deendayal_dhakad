@@ -113,10 +113,26 @@ async def pm_text(bot, message):
     content = message.text
     user = message.from_user.first_name
     user_id = message.from_user.id
+
+    # ===== VERIFICATION CHECK =====
+    if user_id not in ADMINS:
+        if not await vr_db.is_verified(user_id):
+            await message.reply_text(
+                "🔐 Verification Required\n\n"
+                "👉 Please verify once to access files\n"
+                "⏱ Valid for 24 Hours"
+            )
+            return
+    # ===== END VERIFICATION =====
+
     if EMOJI_MODE:
         await message.react(emoji=random.choice(REACTIONS), big=True)
+
     if content.startswith(("/", "#")):
-        return  
+        return
+
+    # নিচে আগের কোড থাকবে
+  
     try:
         await mdb.update_top_messages(user_id, content)
         pm_search = await db.pm_search_status(bot_id)
