@@ -11,11 +11,23 @@ class VR_db:
         self.collection = self.db.verifications
         self.timezone = pytz.timezone(timezone)
 
-    async def save_verification(self, user_id):
-        now = datetime.now(self.timezone)
-        year = now.year  
-        verification = {"user_id": user_id, "verified_at": now, "year": year}
-        self.collection.insert_one(verification)
+    async def save_verification(self, user_id, hours=24):
+    now = datetime.now(self.timezone)
+    expiry = now + timedelta(hours=hours)
+    year = now.year
+
+    verification = {
+        "user_id": user_id,
+        "verified_at": now,
+        "verified_until": expiry,
+        "year": year
+    }
+
+    self.collection.update_one(
+        {"user_id": user_id},
+        {"$set": verification},
+        upsert=True
+    )
 
     def get_start_end_dates(self, time_period, year=None):
         now = datetime.now(self.timezone)
