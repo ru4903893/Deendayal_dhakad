@@ -77,7 +77,7 @@ CAPTION_LANGUAGES = ["Bhojpuri", "Hindi", "Bengali", "Tamil", "English", "Bangla
 # Verification Settings
 # ============================
 VERIFY = bool(environ.get('VERIFY', True))  # Verification On (True) / Off (False)
-DEENDAYAL_VERIFY_EXPIRE = int(environ.get('DEENDAYAL_VERIFY_EXPIRE', 24))  # Add time in hours
+DEENDAYAL_VERIFY_EXPIRE = int(environ.get('DEENDAYAL_VERIFY_EXPIRE', 6))  # Add time in hours
 DEENDAYAL_VERIFIED_LOG = int(environ.get('DEENDAYAL_VERIFIED_LOG', '-1003229154190'))  # Log channel id (make sure bot is admin)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/+VBxO70jODFs1YzY0')  # How to open tutorial link for verification
 
@@ -94,7 +94,7 @@ IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
 # Channel & Group Links Configuration
 # ============================
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/movie_search_group1')
-CHNL_LNK = environ.get('CHNL_LNK', '')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/rdxmovie_hd')
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/Extra_Ordinary_boy')
 DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK = environ.get('DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK', 'https://t.me/+JYcBHgSBaNYxYjdl')
 OWNERID = int(os.environ.get('OWNERID', '7655321383'))  # Replace with the actual admin ID
